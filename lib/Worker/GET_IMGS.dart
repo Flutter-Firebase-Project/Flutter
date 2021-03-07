@@ -65,6 +65,14 @@ class  _Get_Images extends State< Get_Images> {
   Widget build(BuildContext context) {
     return Directionality( textDirection: TextDirection.rtl,
     child:Scaffold(
+      appBar: PreferredSize(
+          preferredSize: Size.fromHeight(40.0), // here the desired height
+          child: AppBar(
+            backgroundColor: Color(0xFFECCB45),
+            elevation: 0.0,
+            //leading: I,
+          )
+      ),
       // backgroundColor: Colors.lightBlueAccent,
       body: Form(
         child: Column(
@@ -74,29 +82,26 @@ class  _Get_Images extends State< Get_Images> {
                 children:[
                   Container(
                     margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                    height: 300,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage('assets/icons/ho.jpg'),
-                        fit: BoxFit.cover,
-                      ),
+                    height: 180,
+                     decoration: BoxDecoration(
+                     color:  Color(0xFFECCB45),
+                     ),
+                  ),
 
-                    ),
-                  ),
-                  Container(
-                    margin: EdgeInsets.fromLTRB(100, 50, 1, 0),
-                    child: IconButton(
-                      alignment: Alignment.topRight,
-                      onPressed: () {
-                        Navigator.push(context,MaterialPageRoute(builder: (BuildContext context) =>PROFILE(name:widget.name)));
-                        },
-                      icon: Icon(
-                        Icons.arrow_back,
-                        color: Colors.white,
-                        size: 30.0,
-                      ),
-                    ),
-                  ),
+                  // Container(
+                  //   margin: EdgeInsets.fromLTRB(100, 50, 1, 0),
+                  //   child: IconButton(
+                  //     alignment: Alignment.topRight,
+                  //     onPressed: () {
+                  //       Navigator.push(context,MaterialPageRoute(builder: (BuildContext context) =>PROFILE(name:widget.name)));
+                  //       },
+                  //     icon: Icon(
+                  //       Icons.arrow_back,
+                  //       color: Colors.white,
+                  //       size: 30.0,
+                  //     ),
+                  //   ),
+                  // ),
                   // Container(
                   //   margin: EdgeInsets.fromLTRB(50, 100, 1, 0),
                   //   child:Text(
@@ -114,11 +119,11 @@ class  _Get_Images extends State< Get_Images> {
                     child:Column(
                       children: <Widget>[
                       Container(
-                      height:547.5,
-                      margin: EdgeInsets.only(top:250),
+                      height:617.5,
+                      margin: EdgeInsets.only(top:91),
                       padding: EdgeInsets.only(top:30,right: 15,left: 15,),
                       decoration: BoxDecoration(
-                        color: Colors.white,
+                        color: Color(0xFF1C1C1C),
                         borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(50),
                           topRight: Radius.circular(50),
@@ -156,7 +161,7 @@ class  _Get_Images extends State< Get_Images> {
                                                height: 150,
                                                width: 150,
                                                decoration: BoxDecoration(
-                                                   color: Colors.black26,
+                                                   color: Colors.grey.withOpacity(0.1),
                                                    borderRadius: BorderRadius.circular(10.0)
                                                ),
                                                child: Center(
